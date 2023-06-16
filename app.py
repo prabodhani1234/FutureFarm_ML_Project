@@ -24,18 +24,18 @@ import os, sys, glob, re
 # Loading soil classification model
 
 
-model_path = "models/SoilModelmy.h5"
+model_path = "models/SoilImageCNN.h5"
 
 SoilNet = load_model(model_path)
 # model_path = "models/naive_bayes.joblib"
 # SoilNet = joblib.load(model_path)
 
 
-classes = {0:"Alluvial Soil:-{ Rice,Wheat,Sugarcane,Maize,Cotton,Soyabean,Jute }",
-1:"Black Soil:-{ Virginia, Wheat , Jowar,Millets,Linseed,Castor,Sunflower} ",
-2:"Clay Soil:-{ Rice,Lettuce,Chard,Broccoli,Cabbage,Snap Beans }",
-3:"Red Soil:{ Cotton,Wheat,Pilses,Millets,OilSeeds,Potatoes }",
-4:"Sandy Soil:{ Cotton,Wheat,Pilses,Millets,OilSeeds,Potatoes }"}
+classes = {0:"Alluvial Soil",
+1:"Black Soil",
+2:"Clay Soil",
+3:"Red Soil",
+4:"Sandy Soil"}
 
 
 def model_predict(image_path,model):
