@@ -1,0 +1,159 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<!-- banner -->
+<section class="banner_w3lspvt" id="home">
+	<div class="csslider infinity" id="slider1">
+		<div class="banner-top">
+			<div class="overlay">
+				<div class="container">
+					<div class="w3layouts-banner-info text-center">
+						<div class="all-text">
+							<h3 class="text-wh">FutureFarm</h3>
+						<h4 class="text-wh mx-auto my-4"><b>Welcome to the FutureFarm Crop Recommendation!</b></h4>
+						<br>
+						<h4 class="text-wh mx-auto my-4"><strong> Get informed decisions about your farming strategy.</strong></h4>
+						<p class="text-li mx-auto mt-2">
+							Don't leave your crop's success to chance. Embrace the future of farming with FutureFarm 
+							Crop Recommendation. Start optimizing your crop selection today and unlock the full potential of your farm!
+						</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>		
+	</div>
+</section>
+
+
+
+
+<!-- //banner -->
+<!-- core values -->
+<section class="core-value py-5" id="about">
+	<div class="container py-md-4">
+		<h3 class="heading mb-sm-5 mb-4 text-center"> About Us</h3>
+		<div class="row core-grids">
+			<div class="col-lg-6 core-left">
+				<img src="{{ url_for('static', filename='images/1598237.png') }}" class="img-fluid" alt="" />
+			</div>
+			<div class="col-lg-6 core-right">
+				<h3 class="mt-4">Driving the Future of Farming: Innovating Agriculture Through Technology and Sustainable Practices</h3>
+				<p class="mt-3">At FutureFarm, we are dedicated to revolutionizing agriculture by harnessing the 
+					power of technology. Our mission is to empower farmers and agricultural businesses with advanced 
+					tools and data-driven insights to optimize crop production, increase profitability, and promote sustainable 
+					farming practices. We use state-of-the-art machine learning and deep learning technologies to help you guide 
+					through the entire farming process.<br><br>
+
+					Join us on our mission to transform agriculture. Experience the power of data-driven decision-making and 
+					unlock the full potential of your farm with FutureFarm Crop Recommendation.</p>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- //core values --> 
+<hr>
+<!--Crop prediction according to the Soil-->
+
+<section id="soil" style="background-color: rgba(0, 0, 0, 0.866);">
+
+	<div class="container-fluid details" style="padding-top: 70px; padding-bottom: 100px;">
+		<h1 style="text-align: center; margin: 0px; color: rgb(216, 183, 32)"><b>Detect Soil Type & Get Crop suggestion</b></h1>
+		<div style="
+			width: 350px;
+			margin: 0px auto;
+			color: rgb(255, 255, 255);
+			border-radius: 25px;
+			padding: 10px 10px;
+			font-weight: bold;">
+		
+		<form action="/predict" method="post" enctype="multipart/form-data" onsubmit="showloading()">
+			<h2 class="h4 mb-3 font-weight-normal"><b>Please Upload The Image</b></h2>
+			
+			<input type="file" name="image" class="upload" style="font-weight: bold;">
+			<br>
+    		<br>
+			<input class="btn btn-lg btn-primary btn-block" style="font-weight: bold;" type="submit" value="Predict">
+
+		</form>
+		</div>
+	</div>
+
+	<div class="image-section" style="display:none;">
+		<div class="img-preview">
+			<div id="imagePreview">
+			</div>
+		</div>
+
+		<div class="col-sm" style="margin-bottom: 23px;">
+			<span class="border border-primary">
+				<img src="{{ user_image }}" alt="User Image" class="img-thumbnail">
+				<!-- <img src="{{pred_output}}" alt="User Image" class="img-thumbnail"> -->
+
+
+			</span>
+		</div>
+</section>
+<hr>
+
+<!-- Products & Services -->
+<section class="blog py-5" id="service">
+	<div class="container py-md-5">
+		<h3 class="heading mb-sm-5 mb-4 text-center"> Our Services</h3>
+		<div class="row blog-grids">
+			<div class="col-lg-4 col-md-6 blog-left mb-lg-0 mb-sm-5 pb-lg-0 pb-5">
+				<img src="{{ url_for('static', filename='images/s1.jpg') }}" class="img-fluid" alt="" />
+				<a href="{{ url_for('crop_recommend') }}">
+					<div class="blog-info">
+
+						<h4>Crop</h4>
+
+						<p class="mt-2"> Recommendation about the type of crops to be cultivated which is 
+							best suited for the respective conditions. </p>
+					</div>
+				</a>
+			</div>
+			<div class="col-lg-4 col-md-6 blog-middle mb-lg-0 mb-sm-5 pb-lg-0 pb-md-5">
+				<img src="{{ url_for('static', filename='images/s2.jpg') }}" class="img-fluid" alt="" />
+				<a href="#soil">
+					<div class="blog-info">
+						<h4>Soil</h4>
+						<p class="mt-2">Recommendation about the type of crops to be cultivated which is 
+							best suited for the Soil type (Base on Soil Image).</p>
+					</div>
+				</a>
+			</div>
+			<div class="col-lg-4 col-md-6 blog-right mt-lg-0 mt-5 pt-lg-0 pt-md-5">
+
+				<img src="{{ url_for('static', filename='images/s4.jpg') }}" class="img-fluid" alt="">
+
+				<!-- <img src="images/s4.jpg" class="img-fliud" alt="" /> -->
+				<a href="#">
+					<div class="blog-info">
+						<h4>Fertilizer</h4>
+						<p class="mt-2">Recommendation about the type of fertilizer best suited for the particular soil
+							and the recommended crop</p>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- //Products & Services -->
+
+
+<!-- Creating custom grid and hover effect
+<section>
+<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+    <div class="hovereffect">
+        <img class="img-responsive" src="images/s2.jpg" alt="">
+        <div class="overlay">
+           <h2>Hover effect 1</h2>
+           <a class="info" href="#">link here</a>
+        </div>
+    </div>
+</div> -->
+
+</html>
+
+{% endblock %}

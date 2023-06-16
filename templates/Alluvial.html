@@ -1,0 +1,299 @@
+{% extends 'layout.html' %} {% block body %}
+
+	<head>
+		<title>Alluvial Soil</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="static/css/output.css" />
+		<link rel="stylesheet" href="static/css/Alluvial.css">
+		<!-- bootstrap -->
+	<link rel="stylesheet" href="static/css/bootstrap.css">
+	<style>
+		table{
+				box-shadow: 0px 10px 20px 0px rgb(0 0 0/20%);
+			}
+		table, th, td {
+		  border:1px solid rgb(88, 88, 88);
+		}
+		th, td{
+			padding: 5px;
+		}
+		</style>
+	</head>
+	<body>
+
+		<!-- Header -->
+		<header>
+		<!-- Predict Soil -->
+			<div class="latest-news pt-80 pb-150">
+				<div class="container">
+
+					<div class="row">
+						<div class="col-lg-8 offset-lg-2 text-center">
+							<div class="section-title">	
+								<h3><span class="orange-text">Alluvial</span> Soil</h3>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-lg-4 col-md-6">
+							<div class="single-latest-news">
+								<div class="latest-news-bg news-bg-1"></div>
+								<div class="news-text-box">
+									<h3>Rice - වී - அரிசி</h3>
+									<p class="excerpt">Rice plants can grow well at soil pH range between 5.5 and 6.5.
+										<br><br>
+										<b>Cultivation Seasons</b>
+										<br>
+										Maha Season - September to March
+										<br>
+										Yala Season - May to late August
+									</p>
+										
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-6 offset-md-3 offset-lg-0">
+							<div class="single-latest-news">
+								<div class="latest-news-bg news-bg-3"></div>
+								<div class="news-text-box">
+									<h3>Sugarcane - උක් - உக்</h3>
+									<p class="excerpt">Sugarcane plants can grow well at soil pH range around 6.3 and 6.9.
+										<br><br>
+										<b>Cultivation Seasons</b>
+										<br>
+										March to April
+										<br>
+										September to October
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-6 offset-md-3 offset-lg-0">
+							<div class="single-latest-news">
+								<div class="latest-news-bg news-bg-4"></div>
+								<div class="news-text-box">
+									<h3>Maize - බඩ ඉරිඟු - சோளம்</h3>
+									<p class="excerpt">Maize plants can grow well at soil pH range between 4.5 and 8.0.
+										<br><br>
+										<b>Cultivation Seasons</b>
+										<br>
+										Jan to Feb & June to July  
+										<br>
+										September to October
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-6 offset-md-3 offset-lg-0">
+							<div class="single-latest-news">
+								<div class="latest-news-bg news-bg-5"></div>
+								<div class="news-text-box">
+									<h3>Cucumbers - පිපිඤ්ඤා - வெள்ளரிகள்</h3>
+									<p class="excerpt">Cucumbers plants can grow well at soil pH range between 6.0 and 6.5.
+										<br><br>
+										<b>Cultivation Seasons</b>
+										<br>
+										Maha Season - Jan to Feb 
+										<br>
+										Yala Season - June to July
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-6 offset-md-3 offset-lg-0">
+							<div class="single-latest-news">
+								<div class="latest-news-bg news-bg-6"></div>
+								<div class="news-text-box">
+									<h3>Bananas - කෙසෙල් - வாழைப்பழங்கள்</h3>
+									<p class="excerpt">Bananas plants can grow well at soil pH range between 6.5 and 7.5.
+										<br><br>
+										<b>Cultivation Seasons</b>
+										<br>
+										Any time of the year
+										<br>
+										<br>
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-6 offset-md-3 offset-lg-0">
+							<div class="single-latest-news">
+								<div class="latest-news-bg news-bg-7"></div>
+								<div class="news-text-box">
+									<h3>Cinnamon-කුරුඳු-இலவங்கப்பட்டை</h3>
+									<p class="excerpt">Cinnamon plants can grow well at soil pH range between 4.5 and 5.5.
+										<br><br>
+										<b>Cultivation Seasons</b>
+										<br>
+										June-July 
+										<br>
+										<br>
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-6 offset-md-3 offset-lg-0">
+							<div class="single-latest-news">
+								<div class="latest-news-bg news-bg-8"></div>
+								<div class="news-text-box">
+									<h3>Coconut - පොල් - தேங்காய்</h3>
+									<p class="excerpt">Coconut plants can grow well at soil pH range between 5.2 and 8.0.
+										<br><br>
+										<b>Cultivation Seasons</b>
+										<br>
+										Maha Season - October to November
+										<br>
+										Yala Season - May to June
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-6 offset-md-3 offset-lg-0">
+							<div class="single-latest-news">
+								<div class="latest-news-bg news-bg-9"></div>
+								<div class="news-text-box">
+									<h3>Tea - තේ - தேநீர்</h3>
+									<p class="excerpt">Tea plants can grow well at soil pH range between 4.0 and 5.5.
+										<br><br>
+										<b>Cultivation Seasons</b>
+										<br>
+										July to September
+										<br>
+										<br>
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-6 offset-md-3 offset-lg-0">
+							<div class="single-latest-news">
+								<div class="latest-news-bg news-bg-10"></div>
+								<div class="news-text-box">
+									<h3>pineapples - අන්නාසි - அன்னாசிப்பழம்</h3>
+									<p class="excerpt">Pineapples plants can grow well at soil pH range between 4.5 and 5.6.
+										<br><br>
+										<b>Cultivation Seasons</b>
+										<br>
+										Any time of the year
+										<br>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<h2 style="margin-top: 50px;">Other</h2>	
+					<div class="row">
+						<div style="margin-left: 40px; margin-top: 50px;">
+							<table>
+								<tr>
+								  <th>Crop Name</th>
+								  <th>Ph value (between)</th>
+								  <th>Cultivation Seasons</th>
+								</tr>
+								<tr>
+									<td><b>Fruits-පළතුරු-பழம்</b></td>
+								  </tr>
+								<tr>
+								  <td>Papayas-පැපොල්-பப்பாளி</td>
+								  <td>4.5 and 8.0</td>
+								  <td>February to march, June to 
+									<br>July, October to November</td>
+								</tr>
+								<tr>
+								  <td>Mangoes-අඹ-மாங்காய்</td>
+								  <td>4.5 and 7.5</td>
+								  <td>Any time of the year</td>
+								</tr>
+								<tr>
+									<td>Oranges-දොඩම්-ஆரஞ்சு</td>
+									<td>6.0 and 7.0</td>
+									<td>Any time of the year</td>
+								</tr>
+								<tr>
+									<td>Guavas-පේර-கொய்யாப்பழம்</td>
+									<td>5.5 and 7.5</td>
+									<td>Any time of the year</td>
+								</tr>
+								<tr>
+									<td>passion fruits-පැෂන්-ஆசை</td>
+									<td>4.5 and 6.5</td>
+									<td>March or in October</td>
+								</tr>
+								<tr>
+									<td>Grapes - මිදි - திராட்சை</td>
+									<td>5.5 and 8.5</td>
+									<td>August-September &<br> January-February</td>
+								</tr>
+								<tr>
+									<td><b>Spices - කුළුබඩු - மசாலா</b></td>
+								</tr>
+								<tr>
+									<td>Pepper ගම්මිරිස් மிளகு</td>
+									<td>6.5 and 7</td>
+									<td>All months of the year</td>
+								</tr>
+								<tr>
+									<td>Turmeric කහ மஞ்சள்</td>
+									<td>4.5 and 7.5</td>
+									<td>March-April</td>
+								</tr>
+							</table>
+						</div>
+						<div style="margin-left: 20px; margin-top: 50px;">
+							<table>
+								<tr>
+								  <th>Crop Name</th>
+								  <th>Ph value (between)</th>
+								  <th>Cultivation Seasons</th>
+								</tr>
+								<tr>
+									<td><b>Vegetables-එළවළු-காய்கறிகள்</b></td>
+								  </tr>
+								<tr>
+								  <td>Tomato-තක්කාලි-தக்காளி</td>
+								  <td>6.2 and 6.8</td>
+								  <td>March and May</td>
+								</tr>
+								<tr>
+								  <td>Beans-බෝංචි-பீன்ஸ்</td>
+								  <td>6 and 7</td>
+								  <td>May to August & <br>November to February</td>
+								</tr>
+								<tr>
+									<td>carrots-කැරට්-கேரட்</td>
+									<td>6 and 7</td>
+									<td>February to July</td>
+								</tr>
+								<tr>
+									<td>cabbage-ගෝවා-<br>முட்டைக்கோஸ்</td>
+									<td>6 and 7</td>
+									<td>Aug to Sept or <br>Sept to October </td>
+								</tr>
+								<tr>
+									<td>cauliflower-වට්ටක්කා-<br>காலிஃபிளவர்</td>
+									<td>6.0 and 6.8.</td>
+									<td>May to August & <br>September to October</td>
+								</tr>
+								<tr>
+									<td>brinjal-බටු-பிரிஞ்சி</td>
+									<td>5.5 and 6.6</td>
+									<td>May to end of August</td>
+								</tr>
+								<tr>
+									<td>Sesame - තල - எள்</td>
+									<td>5 and 8</td>
+									<td>mid-March -early April <br> mid-September -October </td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<!-- Footer -->
+		<footer id="footer">
+		</footer>
+	</body>
+{% endblock %}
