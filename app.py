@@ -26,16 +26,17 @@ import os, sys, glob, re
 
 model_path = "models/SoilImageCNN.h5"
 
-SoilNet = load_model(model_path)
+SoilImage = load_model(model_path)
 # model_path = "models/naive_bayes.joblib"
 # SoilNet = joblib.load(model_path)
 
 
-classes = {0:"Alluvial Soil",
-1:"Black Soil",
-2:"Clay Soil",
-3:"Red Soil",
-4:"Sandy Soil"}
+classes = {
+    0:"Alluvial Soil",
+    1:"Black Soil",
+    2:"Clay Soil",
+    3:"Red Soil",
+    4:"Sandy Soil"}
 
 
 def model_predict(image_path,model):
@@ -158,7 +159,7 @@ def predict():
         file.save(file_path)
 
         print("@@ Predicting class......")
-        pred, output_page = model_predict(file_path,SoilNet)
+        pred, output_page = model_predict(file_path,SoilImage)
               
         return render_template(output_page, pred_output = pred, user_image = file_path)
 
