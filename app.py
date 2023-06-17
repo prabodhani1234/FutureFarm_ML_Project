@@ -186,6 +186,7 @@ def crop_prediction():
         city = request.form.get("city")
 
         if weather_fetch(city) != None:
+            temperature, humidity = weather_fetch(city)
             data = np.array([[N, P, K, temperature, humidity, ph, rainfall]])
             my_prediction = crop_recommendation_model.predict(data)
             final_prediction = my_prediction[0]
