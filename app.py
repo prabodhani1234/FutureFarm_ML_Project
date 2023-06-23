@@ -1,6 +1,7 @@
 # Importing essential libraries and modules
 
-from flask import Flask, render_template, request, Markup
+from flask import Flask, render_template, request
+from markupsafe import Markup
 import numpy as np
 import pandas as pd
 import requests
@@ -186,7 +187,6 @@ def crop_prediction():
         city = request.form.get("city")
 
         if weather_fetch(city) != None:
-            temperature, humidity = weather_fetch(city)
             data = np.array([[N, P, K, temperature, humidity, ph, rainfall]])
             my_prediction = crop_recommendation_model.predict(data)
             final_prediction = my_prediction[0]
