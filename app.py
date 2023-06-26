@@ -179,9 +179,10 @@ def crop_prediction():
         P = int(request.form['phosphorous'])
         K = int(request.form['pottasium'])
         ph = float(request.form['ph'])
+        rainfall = float(request.form['rainfall'])
         temperature = float(request.form['temperature'])
         humidity = float(request.form['humidity'])
-        rainfall = float(request.form['rainfall'])
+        
 
         # state = request.form.get("stt")
         city = request.form.get("city")
