@@ -21,16 +21,11 @@ import os, sys, glob, re
 # ----------------------------- LOADING THE TRAINED MODELS -------------------------------------
 
 
-
 # Loading soil classification model
-
 
 model_path = "models/SoilImageCNN.h5"
 
 SoilImage = load_model(model_path)
-# model_path = "models/naive_bayes.joblib"
-# SoilNet = joblib.load(model_path)
-
 
 classes = {
     0:"Alluvial Soil",
@@ -109,7 +104,6 @@ def weather_fetch(city_name):
         return temperature, humidity
     else:
         return None
-
 
 
 
