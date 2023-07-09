@@ -1,6 +1,7 @@
 # Importing essential libraries and modules
 
-from flask import Flask, render_template, request, Markup
+from flask import Flask, render_template, request
+from markupsafe import Markup
 import numpy as np
 import pandas as pd
 import requests
@@ -20,22 +21,18 @@ import os, sys, glob, re
 # ----------------------------- LOADING THE TRAINED MODELS -------------------------------------
 
 
-
 # Loading soil classification model
 
+model_path = "models/SoilImageCNN.h5"
 
-model_path = "models/SoilModelmy.h5"
+SoilImage = load_model(model_path)
 
-SoilNet = load_model(model_path)
-# model_path = "models/naive_bayes.joblib"
-# SoilNet = joblib.load(model_path)
-
-
-classes = {0:"Alluvial Soil:-{ Rice,Wheat,Sugarcane,Maize,Cotton,Soyabean,Jute }",
-1:"Black Soil:-{ Virginia, Wheat , Jowar,Millets,Linseed,Castor,Sunflower} ",
-2:"Clay Soil:-{ Rice,Lettuce,Chard,Broccoli,Cabbage,Snap Beans }",
-3:"Red Soil:{ Cotton,Wheat,Pilses,Millets,OilSeeds,Potatoes }",
-4:"Sandy Soil:{ Cotton,Wheat,Pilses,Millets,OilSeeds,Potatoes }"}
+classes = {
+    0:"Alluvial Soil",
+    1:"Black Soil",
+    2:"Clay Soil",
+    3:"Red Soil",
+    4:"Sandy Soil"}
 
 
 def model_predict(image_path,model):
@@ -110,7 +107,6 @@ def weather_fetch(city_name):
 
 
 
-
 # ===============================================================================================
 # ------------------------------------ FLASK APP -------------------------------------------------
 
@@ -158,7 +154,7 @@ def predict():
         file.save(file_path)
 
         print("@@ Predicting class......")
-        pred, output_page = model_predict(file_path,SoilNet)
+        pred, output_page = model_predict(file_path,SoilImage)
               
         return render_template(output_page, pred_output = pred, user_image = file_path)
 
@@ -177,9 +173,10 @@ def crop_prediction():
         P = int(request.form['phosphorous'])
         K = int(request.form['pottasium'])
         ph = float(request.form['ph'])
+        rainfall = float(request.form['rainfall'])
         temperature = float(request.form['temperature'])
         humidity = float(request.form['humidity'])
-        rainfall = float(request.form['rainfall'])
+        
 
         # state = request.form.get("stt")
         city = request.form.get("city")

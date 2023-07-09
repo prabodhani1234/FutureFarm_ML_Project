@@ -2,7 +2,7 @@
 
 <style>
   html body {
-    background: linear-gradient(135deg, #e4e4d9 60%, #215f00);
+    background: #e4e4d9;
   }
 </style>
 <!--Form Section-->
@@ -14,7 +14,7 @@
 
 <div
   style="
-    width: 350px;
+    width: 380px;
     height: 60rem;
     margin: 0px auto;
     color: black;
@@ -51,7 +51,7 @@
     </div>
 
     <div class="form-group">
-      <label for="Pottasium" style="font-size: 17px"><b>Pottasium</b></label>
+      <label for="Pottasium" style="font-size: 17px"><b>Potassium</b></label>
       <input
         type="number"
         class="form-control"
@@ -76,32 +76,6 @@
       />
     </div>
     <div class="form-group">
-      <label for="temperature" style="font-size: 17px"><b>Temperature</b></label>
-      <input
-        type="number"
-        step="0.01"
-        class="form-control"
-        id="temperature"
-        name="temperature"
-        placeholder="Enter the value"
-        style="font-weight: bold"
-        required
-      />
-    </div>
-    <div class="form-group">
-      <label for="humidity" style="font-size: 17px"><b>Humidity</b></label>
-      <input
-        type="number"
-        step="0.01"
-        class="form-control"
-        id="humidity"
-        name="humidity"
-        placeholder="Enter the value"
-        style="font-weight: bold"
-        required
-      />
-    </div>
-    <div class="form-group">
       <label for="Rainfall" style="font-size: 17px"
         ><b>Rainfall (in mm)</b></label
       >
@@ -117,7 +91,33 @@
       />
     </div>
     <div class="form-group">
-      <label for="State" style="font-size: 17px"><b>State</b></label>
+      <label for="Rainfall" style="font-size: 17px"
+        ><b>Temperature</b></label
+      >
+      <input
+        type="number"
+        class="form-control"
+        id="Temperature"
+        name="temperature"
+        placeholder="Enter the value"
+        style="font-weight: bold"
+      />
+    </div>
+    <div class="form-group">
+      <label for="Rainfall" style="font-size: 17px"
+        ><b>Humidity</b></label
+      >
+      <input
+        type="number"
+        class="form-control"
+        id="Humidity"
+        name="humidity"
+        placeholder="Enter the value"
+        style="font-weight: bold"
+      />
+    </div>
+    <div class="form-group">
+      <label for="State" style="font-size: 17px"><b>Province</b></label>
       <select
         onchange="print_city('state', this.selectedIndex);"
         id="sts"
@@ -127,7 +127,7 @@
         required
       ></select>
       <br />
-      <label for="City" style="font-size: 17px"><b>City</b></label>
+      <label for="City" style="font-size: 17px"><b>District</b></label>
       <select
         id="state"
         class="form-control"
@@ -156,9 +156,9 @@
         Predict
       </button>
     </div>
+    </div>
   </form>
 </div>
-
 <!-- Form section -->
 
 {% endblock %}
