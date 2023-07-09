@@ -37,6 +37,17 @@ A simple ML and DL-based website that suggests suitable crops based on soil chem
 
 ![soil_clssification](https://github.com/prabodhani1234/FutureFarm_ML_Project/blob/master/images/soil_clssification.png)
 
+<details>
+  <summary>Supported Soil Types
+</summary>
+
+- Red Soil
+- Black Soil
+- Clay Soil
+- Sandy Soil
+- Alluvial Soil
+</details>
+
 - Crop suggestion using soil factors and environmental factors system ==> Enter the relevant data such as Soil(N,P,K), Ph value, humidity, temperature and rainfall
 Note: When you enter the Province name, make sure to enter district names. Because, if the user does not enter the temperature and humidity, then system automatically calculates it using weather API.
 
@@ -70,16 +81,6 @@ Note: When you enter the Province name, make sure to enter district names. Becau
 - watermelon
 </details>
 
-<details>
-  <summary>Supported Soil Types
-</summary>
-
-- Red Soil
-- Black Soil
-- Clay Soil
-- Sandy Soil
-- Alluvial Soil
-</details>
 
 ## Contact
 
