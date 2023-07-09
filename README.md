@@ -8,7 +8,7 @@ A simple ML and DL-based website that suggests suitable crops based on soil chem
 - [Crop dataset ](https://drive.google.com/file/d/1pDQM-Y4y37DVZjFowy-7GhWFX-0SB9b_/view?usp=sharing)
 - [Soil_dataset](https://drive.google.com/drive/folders/1qjkug3Wj6idSXwpK96pIi_pD90cg_5kE?usp=sharing)
 
-## Notebooks 📓
+## Notebooks
 - [Crop Suggestion]()
 - [Soil_Classification]()
 
@@ -81,7 +81,7 @@ Note: When you enter the Province name, make sure to enter district names. Becau
 - Alluvial Soil
 </details>
 
-## Contact 📞
+## Contact
 
 #### If you have any doubt [email](prabodhaniherath2@gmail.com) me or hit me up on [LinkedIn](https://www.linkedin.com/in/prabodhani-herath-aa644224a/)
 
