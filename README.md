@@ -9,8 +9,8 @@ A simple ML and DL-based website that suggests suitable crops based on soil chem
 - [Soil_dataset](https://drive.google.com/drive/folders/1qjkug3Wj6idSXwpK96pIi_pD90cg_5kE?usp=sharing)
 
 ## Notebooks
-- [Crop Suggestion]()
-- [Soil_Classification]()
+- [Crop Suggestion](https://github.com/prabodhani1234/soil_classification_and_crop_suggestion/tree/master/Jupyter%20Notebook)
+- [Soil_Classification](https://github.com/prabodhani1234/soil_classification_and_crop_suggestion/tree/master/Jupyter%20Notebook)
 
 ## How To Run Local Demo
 - First make sure you have [python](https://www.python.org/downloads/), [git](https://git-scm.com/download), [Anaconda](https://www.anaconda.com/) or [miniconda](https://docs.conda.io/en/latest/miniconda.html) installed on your computer.
